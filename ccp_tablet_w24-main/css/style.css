@@ -1,0 +1,418 @@
+/* Font and visual hierarchy */
+h1{
+    font-size: 32px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    color: darkblue;
+    text-align: center;
+    line-height: 150%; 
+}
+
+header > h1{
+    display: block;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    text-align: center;
+    color: white;
+    background-color: #181818;
+}
+
+h2{
+    font-size: 24px;
+    color: darkblue;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+h3{
+    font-size: 20px;
+    color: darkblue;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+p, ol > li{
+    font-size: 18px;
+    line-height: 150%;
+    padding: 12px;
+}
+
+ol > li{
+    padding-bottom: 12px;
+}
+
+.text ul > li{
+    display: inline-block;
+    color: darkblue;
+    border: dashed 1px darkblue;
+    border-radius: 6px;
+    padding: 6px;
+    margin-right: 6px;
+    margin-bottom: 3px;
+
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color:rgb(253, 255, 181);
+    color: #585858;
+}
+
+b{
+    color: darkblue;
+    padding-right: 8px;
+}
+
+hr{
+    border: grey solid 1px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+}
+
+em{
+    font-size: 24px;
+    color: darkblue;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Header and navigation */
+/* Navigation is set to the center */
+nav{
+    padding: 0;
+    background-color: rgb(253, 255, 181);
+    display: block;
+    text-align: center;
+}
+
+header{
+    background-color: rgb(253, 255, 181);
+}
+
+header ul{
+    list-style-type: none;
+    text-align: center;
+    margin:0;
+}
+
+header li{
+    display: flex;
+    flex-direction: vertical;
+    background-color:darkblue;
+    border: solid rgb(206, 213, 0);
+    border-width: 0px 3px 3px 0px;
+
+}
+
+header li a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+    padding: 16px 12px;
+    color: yellow; 
+}
+
+.active a{
+    color: white;
+    background-color: rgb(73, 73, 73);
+    text-decoration: underline;
+}
+
+header a:hover{
+    color: white;
+    background-color: grey;
+    text-decoration: underline;
+}
+
+
+
+/* Skip button */
+.skip{
+    top: -100px;
+    position: absolute;
+}
+
+
+.skip:focus{
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #585858;
+    background-color: none;
+    top: 0px;
+}
+
+
+
+
+/* Specify classes in the grid */
+.photos img, video{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: solid darkblue 6px;
+    border-radius: 12px;
+}
+
+/* Center the single image in the container */
+.single {
+    text-align: center;
+}
+
+.single img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+}
+
+/* Center the topic heading in the container */
+.text h2{
+    text-align: center;
+}
+
+/* specify 3:2 layout of all the pages*/
+.grid-overall{
+    display: grid;
+    grid-template-columns: 12px 4fr 3fr 12px;
+    justify-content: center;
+    margin: auto;
+}
+
+.grid-overall>div{
+    padding: 12px;
+}
+
+.text{
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+    max-width: fit-content;
+    border: darkblue dashed 3px;
+    border-radius: 12px;
+}
+
+.photos{
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    max-width: fit-content;
+}
+
+.home-left, .head-left{
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+    min-width: 300px;
+}
+
+.home-right, .head-right{
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    min-width: 350px;
+}
+
+.head-right{
+    text-align: center;
+}
+
+.home-left img{
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    max-height: 450px;
+}
+
+/* Specify button behaviors */
+.grid-overall a{
+    display: inline-block;
+    background-color: darkblue;
+    color: yellow;
+    margin: 12px;
+    padding: 16px 12px;
+    text-decoration: none;
+    text-align: center;
+    border: solid yellow 0px 3px 3px 0px;
+    border-radius: 6px;
+}
+
+.grid-overall a:hover{
+    color: white;
+    background-color: grey;
+
+}
+
+
+.grid-gallary{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    border-radius: 24px;
+    column-gap: 24px;
+    row-gap: 24px;
+    justify-content: space-between;
+}
+
+.grid-gallary > div{
+    width: 100%;
+}
+
+.grid-gallary .a{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.grid-gallary .b{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.grid-gallary .c{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.grid-gallary .d{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* Media query */
+
+@media screen and (min-width: 768px){
+    .single img{
+        width: 100%;
+        max-height: 500px;
+        max-width: 500px;
+    }
+
+    .photos > h3{
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .grid-gallary div{
+        width: 100%;
+    }
+
+    .grid-gallary img{
+        aspect-ratio: 3/2;
+    }
+
+  
+    .grid-gallary .a{
+        grid-column: 1 / -1;
+        grid-row: 1 / span 1;
+    }
+
+    .grid-gallary .b{
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1;
+    }
+
+    .grid-gallary .c{
+        grid-column: 1 / -1;
+        grid-row: 3 / span 1;
+    }
+
+    .grid-gallary .d{
+        grid-column: 1 / -1;
+        grid-row: 4 / span 1;
+    }
+
+
+
+    .grid-overall{
+        align-items: center;
+    }
+
+    .head-left{
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+    }
+    .head-right{
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .grid-overall .text{
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        border-radius: 24px;
+        border-width: 0px;
+        margin-right: 36px;
+    }
+
+    .grid-overall .photos{
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+
+    .grid-overall .home-left{
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 1;
+        max-height: 450px;
+    }
+
+    .grid-overall .home-right{
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 1;
+        max-height: 300px;
+        background-color: rgba(255,255,255,0.7);
+        backdrop-filter: blur(3px);
+        border-radius: 36px;
+
+    }
+
+    .home-left{
+        overflow: hidden;
+    }
+
+    .home-right{
+        text-align: center;
+    }
+
+    .home-left > img{
+        max-height: 600px;
+    }
+
+
+    header > h1{
+        padding: 24px;
+    }
+
+    nav{
+        padding: 24px 0 24px 0;
+    }
+
+    header li{
+        display: inline-block;
+    }
+
+    header li a{
+        display: inline-block;
+        text-align: center;
+        width: 150px;
+        padding: 16px 12px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
